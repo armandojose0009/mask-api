@@ -1,0 +1,139 @@
+{
+  "info": {
+    "name": "Mask API",
+    "description": "API to mask strings keeping last 4 characters visible",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Mask String",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"input\": \"455636460793561\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/mask",
+          "host": ["{{baseUrl}}"],
+          "path": ["mask"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get History",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/mask/history",
+          "host": ["{{baseUrl}}"],
+          "path": ["mask", "history"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Mask Credit Card",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"input\": \"4556364607935616\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/mask",
+          "host": ["{{baseUrl}}"],
+          "path": ["mask"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Mask Text",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"input\": \"Skippy\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/mask",
+          "host": ["{{baseUrl}}"],
+          "path": ["mask"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Mask Short String",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"input\": \"123\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/mask",
+          "host": ["{{baseUrl}}"],
+          "path": ["mask"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Error - Invalid JSON",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"invalid\": \"json\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/mask",
+          "host": ["{{baseUrl}}"],
+          "path": ["mask"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
